@@ -13,6 +13,4 @@
     - Windows: `.\myVenv\Scripts\activate.bat`
 4. Uscire dal virtual environment: 
     - Linux: `deactivate`
-    - Windows:`myVenv\Scripts\deactivate.bat`(controllare se serve fare così o basta `deactivate`)
-
-
+    - Windows:`myVenv\Scripts\deactivate.bat` (controllare se serve fare così o basta `deactivate`)
