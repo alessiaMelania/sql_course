@@ -1,0 +1,56 @@
+create_tables:
+  students: "
+    CREATE TABLE Students (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT NOT NULL,
+      age INTEGER,
+      email TEXT
+    );
+  "
+  students_v2: "
+      CREATE TABLE IF NOT EXISTS Students (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        age INTEGER,
+        email TEXT
+      );
+    "
+
+
+
+insert_data:
+  insert_single_record: "
+    INSERT INTO Students (name, age, email) 
+    VALUES ('John Doe', 20, 'johndoe@example.com');
+  "
+  insert_multiple_records: "
+    INSERT INTO Students (name, age, email) 
+    VALUES 
+      ('Bahadurjit Sabharwal', 18, 'tristanupadhyay@example.net'),
+      ('Zayyan Arya', 20, 'yashawinibhakta@example.org'),
+      ('Hemani Shukla', 18, 'gaurikanarula@example.com');
+  "
+
+insert_data_query&values:
+  insert_single_record:
+    query: "
+      INSERT INTO Students (name, age, email) 
+      VALUES (?, ?, ?);
+    "
+    value: [ 'Jane Smith', 20, 'janesmith@example.com']
+
+  insert_multiple_records:
+    query: "
+          INSERT INTO Students (name, age, email) 
+          VALUES (?, ?, ?);
+        "
+    values: [
+      [ 'Bahadurjit Sabharwal', 18, 'tristanupadhyay@example.net' ],
+      [ 'Zayyan Arya', 20, 'yashawinibhakta@example.org' ],
+      [ 'Hemani Shukla', 18, 'gaurikanarula@example.com' ]
+    ]
+
+query_tables:
+
+
+
