@@ -16,8 +16,6 @@ create_tables:
       );
     "
 
-
-
 insert_data:
   insert_single_record: "
     INSERT INTO Students (name, age, email) 

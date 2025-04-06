@@ -1,6 +1,7 @@
 import sqlite3
+import yaml
 
-sqliteConnection = sqlite3.connect('./sqlite_dbs/myFirst_db.db')
+sqliteConnection = sqlite3.connect('myNew_db.db')
 
 cursor = sqliteConnection.cursor()
 print('DB Init')

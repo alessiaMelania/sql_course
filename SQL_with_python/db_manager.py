@@ -56,8 +56,8 @@ if __name__ == '__main__':
     # print(os.getcwd())
 
     # Paths
-    database_path = "sqlite_dbs/myFirst_db.db"
-    path_queries = "queries_myFirst_db.yaml"
+    database_path = "./SQL_with_python/my_database.db"
+    path_queries = "./SQL_with_python/queries_myFirst_db.yaml"
 
     # Read queries
     queries = read_queries(path_queries)
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     logging.info(f"{'-' * 40}\n")
     # -------------------------------------------------------------------------
     # Create Student tables
-    #db.execute_query(queries["create_tables"]["students"])
+    db.execute_query(queries["create_tables"]["students"])
     logging.info("Table 'Students' created successfully!")
 
     # Save (commit) the changes to the database.
